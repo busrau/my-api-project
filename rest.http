@@ -1,0 +1,46 @@
+###Get a list of all books
+GET http://localhost:4000/api/books
+
+### Create a book
+POST http://localhost:4000/api/books
+Content-Type: application/json
+
+{
+    "title": "Example Book",
+    "author": {
+        "name": "John Doe",
+        "country": "US",
+        "birthDate": "1990-07-21"
+    },
+    "isbn": "1234567890",
+    "price": 20.99,
+    "language": "English",
+    "numberOfPages": 300,
+    "publisher": "Example Publisher"
+}
+
+### Update a book by id
+PUT  http://localhost:4000/api/books/65d1d03f44ea7f40b608c853
+Content-Type: application/json
+
+{
+    "title": "Example Book",
+    "author": {
+        "name": "John Doee",
+        "country": "US",
+        "birthDate": "1990-07-21"
+    },
+    "isbn": "1234567890",
+    "price": 20.99,
+    "language": "English",
+    "numberOfPages": 300,
+    "publisher": "Example Publisher"
+}
+
+
+
+### Delete a book by id
+DELETE  http://localhost:3000/api/books/5df118b3c86e5826958b661a
+
+### 404 route Not Found
+GET http://localhost:4000/abc_xyz
